@@ -7,6 +7,7 @@
 5.) Add Service Grafana  
 6.) Add Prometheus 
 7.) ADD SSL HTTPS Managed Certificate
+X.) Debuging  
 
 
 
@@ -167,7 +168,7 @@ helm install prometheus prometheus-community/prometheus --namespace production
         pathType: Prefix
 ```
 
-# 7 SSL
+# 7 ADD SSL HTTPS Managed Certificate
 
 ```
 apiVersion: networking.gke.io/v1
@@ -192,3 +193,16 @@ managed-cert-for-ingress   15m   Provisioning >>> Active
 Testing https
 GO TO >> https://prometheus.projectdevops.eu/  
 GOT TO >> https://grafana.projectdevops.eu/
+
+# X Debuging
+```
+flux get sources git  # IT GIVES NAME
+
+flux reconcile source git PASTE_NAME --namespace flux-system
+flux reconcile source git flux-system --namespace flux-system # WYMUSZENIE SYNCHRO
+
+
+kubectl get gitrepositories -n flux-system
+
+
+```
