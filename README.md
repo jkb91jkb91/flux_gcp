@@ -1,7 +1,7 @@
 # INFO
 
 1.) Install Flux  
-2.) Architecture  
+2.) Architecture  and initial INGRESS
 3.) Bootstrap  
 4.) Testing  
 5.) Add Service Grafana  
@@ -31,6 +31,27 @@ kubectl create ns production
 │   |    └──   configmap.yaml
 │   ├── production/
 │   │   └── kustomization.yaml      <<<< resources :- namespace: production(OVERWRITES)
+```
+
+Initial Ingress  
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-basics
+  namespace: production
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+  rules:
+    http:
+      paths:
+      - backend:
+          service:
+            name: php-service
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
 ```
 
 # 3 BOOTSTRAP >> EXECUTE THIS COMMAND >> THIS WILL INSTALL FLUX-SYSTEM IN YOUR CLUSTER
