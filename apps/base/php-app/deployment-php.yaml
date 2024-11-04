@@ -16,7 +16,7 @@ spec:
       containers:
       - name: php
         imagePullPolicy: Always
-        image: jkb91/php_docker:2.0
+        image: jkb91/php_docker:3.0
         env:
         - name: MYSQL_DATABASE
           value: "test1"
