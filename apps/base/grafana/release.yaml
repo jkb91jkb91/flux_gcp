@@ -7,7 +7,7 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: ./apps/base/grafana/
+      chart: ./apps/base/grafana/grafana-app/
       sourceRef:
         kind: GitRepository
         name: flux-system

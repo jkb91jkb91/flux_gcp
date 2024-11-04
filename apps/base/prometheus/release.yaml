@@ -7,7 +7,7 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: ./apps/base/prometheus
+      chart: ./apps/base/prometheus/prometheus-app/
       sourceRef:
         kind: GitRepository
         name: flux-system
