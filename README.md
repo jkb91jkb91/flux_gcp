@@ -4,6 +4,7 @@
 2.) Architecture  
 3.) Bootstrap  
 4.) Testing  
+5.) Add Service Grafana  
 
 
 
@@ -80,3 +81,44 @@ spec:
 
 AFTER ~3-5 min GO >> GO >> http://34.54.140.202 << COLOR OF THE SITE SHOUD BE DIFFERENT  
 
+
+# 5 ADD SERVICE GRAFANA
+
+```
+helm install my-grafana grafana/grafana --namespace production
+```
+
+Update your DNS RECORDS ON CLOUD
+RECORD A = DOMAIN
+RECORD A = grafana.DOMAIN
+
+Edit Ingress
+```
+kubectl edit ingress ingress-basics -n production
+```
+
+Update INGRESS
+```
+spec:
+  rules:
+  - host: projectdevops.eu
+    http:
+      paths:
+      - backend:
+          service:
+            name: php-service
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  - host: grafana.projectdevops.eu
+    http:
+      paths:
+      - backend:
+          service:
+            name: my-grafana
+            port:
+              number: 80
+        path: /
+        pathType: Prefi
+```
