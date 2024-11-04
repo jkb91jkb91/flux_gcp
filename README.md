@@ -6,6 +6,7 @@
 4.) Testing  
 5.) Add Service Grafana  
 6.) Add Prometheus 
+7.) ADD SSL HTTPS Managed Certificate
 
 
 
@@ -142,4 +143,19 @@ helm install prometheus prometheus-community/prometheus --namespace production
               number: 80
         path: /
         pathType: Prefix
+```
+
+# 7 SSL
+
+```
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: managed-cert-for-ingress
+spec:
+  domains:
+    - projectdevops.eu
+    - grafana.projectdevops.eu
+    - prometheus.projectdevops.eu
+
 ```
