@@ -159,3 +159,11 @@ spec:
     - prometheus.projectdevops.eu
 
 ```
+
+```
+
+# kubectl get managedcertificates -n production
+NAME                       AGE   STATUS
+managed-cert-for-ingress   15m   Provisioning >>> Active
+
+```
