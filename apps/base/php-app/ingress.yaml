@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mysql
+            name: php-service
             port:
               number: 80
