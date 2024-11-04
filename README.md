@@ -6,9 +6,12 @@
 
 
 
-# 1 INSTALL FLUX
+# 1 INSTALL FLUX AND CREATE PRODUCTION NAMESPACE IN CLUSTER
 ```
 curl -s https://fluxcd.io/install.sh | sudo bash
+```
+```
+kubectl create ns production
 ```
 
 # 2 ARCHITECTURE
