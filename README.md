@@ -32,8 +32,8 @@ kubectl create ns production
 
 # 3 BOOTSTRAP >> EXECUTE THIS COMMAND >> THIS WILL INSTALL FLUX-SYSTEM IN YOUR CLUSTER
 
+flux bootstrap github --owner=PASTE_YOUR_GITHUB_USER --repository=PASTE_HERE_REPO_NAME --branch=PASTE_HERE_BRANCH --path=apps/production --personal  
 ```
-flux bootstrap github --owner=jkb91jkb91 --repository=PASTE_HERE_REPO_NAME --branch=PASTE_HERE_BRANCH --path=apps/production --personal
 flux bootstrap github --owner=jkb91jkb91 --repository=flux_gcp --branch=master --path=apps/production --personal
 ```
 This will install flux-system and get all components to cluster
