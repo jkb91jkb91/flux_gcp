@@ -1,7 +1,9 @@
 # INFO
 
-1.) Install Flux
-
+1.) Install Flux  
+2.) Architecture  
+3.) Bootstrap  
+4.) Testing  
 
 
 
@@ -48,7 +50,7 @@ This will install flux-system and get all components to cluster
 │   |   └── flux-system <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ```
 
-# TESTING
+# 4 TESTING
 ```
 kubectl get ingresses -n production
 ```
