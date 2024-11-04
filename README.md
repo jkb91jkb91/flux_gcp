@@ -167,3 +167,6 @@ NAME                       AGE   STATUS
 managed-cert-for-ingress   15m   Provisioning >>> Active
 
 ```
+Testing https
+GO TO >> https://prometheus.projectdevops.eu/  
+GOT TO >> https://grafana.projectdevops.eu/
