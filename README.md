@@ -64,7 +64,19 @@ GO >> http://34.54.140.202
 
 NOW CHANGE in deployment-php.yaml IMAGE and push to REPOSITORY
 
+```
+spec:
+      containers:
+      - name: php
+        image: jkb91/php_docker:1.0
+```
 
+```
+spec:
+      containers:
+      - name: php
+        image: jkb91/php_docker:2.0
+```
 
-
+AFTER ~3-5 min GO >> GO >> http://34.54.140.202 << COLOR OF THE SITE SHOUD BE DIFFERENT  
 
