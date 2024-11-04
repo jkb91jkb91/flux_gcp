@@ -1,0 +1,10 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  namespace: production
+  name: managed-cert-for-ingress
+spec:
+  domains:
+    - projectdevops.eu
+    - grafana.projectdevops.eu
+    - prometheus.projectdevops.eu
