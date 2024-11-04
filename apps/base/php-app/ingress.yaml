@@ -7,19 +7,36 @@ metadata:
     kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-  - http:
+  - host: projectdevops.eu
+    http:
       paths:
-      - path: /
-        pathType: Prefix
-        backend:
+      - backend:
           service:
             name: php-service
             port:
               number: 80
-      - path: /grafana
+        path: /
         pathType: Prefix
-        backend:
+  - host: grafana.projectdevops.eu
+    http:
+      paths:
+      - backend:
           service:
             name: my-grafana
             port:
               number: 80
+        path: /
+        pathType: Prefix
+  - host: prometheus.projectdevops.eu
+    http:
+      paths:
+      - backend:
+          service:
+            name: prometheus-server
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+
+
+              
