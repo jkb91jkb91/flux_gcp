@@ -42,16 +42,17 @@ metadata:
   namespace: production
   annotations:
     kubernetes.io/ingress.class: "gce"
+spec:
   rules:
-    http:
+  - http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        backend:
           service:
             name: php-service
             port:
               number: 80
-        path: /
-        pathType: Prefix
 ```
 
 # 3 BOOTSTRAP >> EXECUTE THIS COMMAND >> THIS WILL INSTALL FLUX-SYSTEM IN YOUR CLUSTER
