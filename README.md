@@ -121,7 +121,25 @@ spec:
             port:
               number: 80
         path: /
-        pathType: Prefi
+        pathType: Prefix
 ```
 
-# 6 ADD SERVICE GRAFANA
+# 6 ADD SERVICE PROMETHEUS
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+helm install prometheus prometheus-community/prometheus --namespace production
+```
+
+```
+ - host: prometheus.projectdevops.eu
+    http:
+      paths:
+      - backend:
+          service:
+            name: prometheus-server
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+```
