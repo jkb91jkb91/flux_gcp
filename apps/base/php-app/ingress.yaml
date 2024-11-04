@@ -16,3 +16,10 @@ spec:
             name: php-service
             port:
               number: 80
+      - path: /grafana
+        pathType: Prefix
+        backend:
+          service:
+            name: my-prometheus-grafana
+            port:
+              number: 80
