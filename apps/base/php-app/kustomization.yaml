@@ -1,3 +1,4 @@
 resources:
   - deployment-php.yaml
   - deployment-sql.yaml
+  - ingress.yaml
