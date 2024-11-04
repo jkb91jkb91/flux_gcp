@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: production
 resources:
   - ../base/php-app
+  - ingress.yaml
