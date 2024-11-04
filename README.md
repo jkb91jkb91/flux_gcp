@@ -5,6 +5,7 @@
 3.) Bootstrap  
 4.) Testing  
 5.) Add Service Grafana  
+6.) Add Prometheus 
 
 
 
@@ -122,3 +123,5 @@ spec:
         path: /
         pathType: Prefi
 ```
+
+# 6 ADD SERVICE GRAFANA
