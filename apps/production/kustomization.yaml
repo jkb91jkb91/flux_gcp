@@ -3,4 +3,6 @@ kind: Kustomization
 namespace: production
 resources:
   - ../base/php-app
+  - ../base/grafana
+  - ../base/grafana
   - ingress.yaml
