@@ -4,6 +4,7 @@
 2.) Architecture  and initial INGRESS
 3.) Bootstrap   
 4.) Testing   
+------------------------------------------------- ADDING HELM CHARTS ---------------------------------------------------------------------------------------------------------------------------------
 5.) Add Service Grafana   
 6.) Add Prometheus  
 7.) ADD SSL HTTPS Managed Certificate   
@@ -108,7 +109,7 @@ spec:
 AFTER ~3-5 min GO >> GO >> http://34.54.140.202 << COLOR OF THE SITE SHOUD BE DIFFERENT  
 
 
-# 5 ADD SERVICE GRAFANA
+# 5 ADD SERVICE GRAFANA 
 
 ```
 helm install my-grafana grafana/grafana --namespace production
@@ -197,6 +198,8 @@ GOT TO >> https://grafana.projectdevops.eu/
 
 # X Debuging
 ```
+
+1 >>> HOW TO TRIGGER RECONCILATION MANUALLY
 flux get sources git  # IT GIVES NAME
 
 flux reconcile source git PASTE_NAME --namespace flux-system
@@ -205,5 +208,12 @@ flux reconcile source git flux-system --namespace flux-system # WYMUSZENIE SYNCH
 
 kubectl get gitrepositories -n flux-system
 
+2 >>> HOW TO CHECK HELM REPOSITORY APPLICATION
+helm ls -n NAMESPACE
+kubectl get helmreleases -A
+
+IF HELM RELEASE NOT APPLIED >>> CHECK LOGS
+kubectl logs -n flux-system deployment/source-controller
+kubectl logs -n flux-system deployment/kustomize-controller
 
 ```
