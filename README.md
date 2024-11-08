@@ -4,9 +4,10 @@
 2.) Architecture  and initial INGRESS
 3.) Bootstrap   
 4.) Testing   
-------------------------------------- ADDING HELM CHARTS ---------------------------------
+------------------------------------- ADDING HELM CHARTS ---------------------------------  
 5.) Add Service Grafana   
 6.) Add Prometheus  
+--------------------------------------------ADDING SSL -----------------------------------  
 7.) ADD SSL HTTPS Managed Certificate   
 X.) Debuging    
 
