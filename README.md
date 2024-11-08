@@ -2,12 +2,12 @@
 
 1.) Install Flux  
 2.) Architecture  and initial INGRESS
-3.) Bootstrap  
-4.) Testing  
-5.) Add Service Grafana  
-6.) Add Prometheus 
-7.) ADD SSL HTTPS Managed Certificate  
-X.) Debuging   
+3.) Bootstrap   
+4.) Testing   
+5.) Add Service Grafana   
+6.) Add Prometheus  
+7.) ADD SSL HTTPS Managed Certificate   
+X.) Debuging    
 
 
 
