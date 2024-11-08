@@ -6,8 +6,8 @@
 4.) Testing  
 5.) Add Service Grafana  
 6.) Add Prometheus 
-7.) ADD SSL HTTPS Managed Certificate
-X.) Debuging  
+7.) ADD SSL HTTPS Managed Certificate  
+X.) Debuging   
 
 
 
@@ -89,6 +89,7 @@ ingress-basics   <none>   *       34.54.140.202   80      7m26s
 GO >> http://34.54.140.202
 
 NOW CHANGE in deployment-php.yaml IMAGE and push to REPOSITORY
+kubectl edit deploy deployment-php -n production  
 
 ```
 spec:
